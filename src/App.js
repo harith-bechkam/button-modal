@@ -21,7 +21,7 @@ return (
             <input id="input" type="text" onChange={getData} autofocus/>          
            <div> 
            {
-             {data}.length!=0?<p>{data}</p>:alert("Please enter input' if it is empty");
+             {data}.length!=0?<p>{data}</p>:alert("Please enter input' if it is empty")
            }  
              <button onClick={() => setModalIsOpen(false)}>close</button>
            </div>
