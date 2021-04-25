@@ -19,7 +19,7 @@ function closebutton(){
     setModalIsOpen(false)
    
     
-    : alert("hello")
+    : alert("'Please enter input' if it is empty.")
     setPrint(false)
   }
     
