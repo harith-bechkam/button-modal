@@ -3,14 +3,29 @@ import Modal from "react-modal";
 
 
  export default function App(){
-const[modalIsOpen,setModalIsOpen]=useState(false)
-const[data,setData]=useState(null)
+const[modalIsOpen,setModalIsOpen]=useState(false);
+const[data,setData]=useState(null);
+const[print,setPrint]=useState(false);
 
  function getData(val){
 setData(val.target.value)
-//here iam printing for confirming data is passed or not
+setPrint(true)
 console.log(val.target.value)
 }
+function closebutton(){
+  {
+    setData("")
+    print?
+    setModalIsOpen(false)
+   
+    
+    : alert("hello")
+    setPrint(false)
+  }
+    
+    
+}
+
 
 return (
   
@@ -18,12 +33,9 @@ return (
       <button onClick={() => setModalIsOpen(true)}>open</button>
          <Modal isOpen={modalIsOpen}>
            <label>Input:</label>
-            <input id="input" type="text" onChange={getData} autofocus/>          
-           <div> 
-           {
-             {data}.length!=0?<p>{data}</p>:alert("Please enter input' if it is empty")
-           }  
-             <button onClick={() => setModalIsOpen(false)}>close</button>
+            <input id="input" type="text" onChange={getData} autoFocus/>          
+           <div>   
+             <button onClick={closebutton}>close</button>
            </div>
          </Modal>     
     </div>
